@@ -1,8 +1,19 @@
+.title-wrap {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+}
+
 .qrcode-wrap {
     display: flex;
     height: 150px;
     justify-content: center;
     align-items: center;
+}
+.button-group-wrap {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
 }
 
 .add-panel-wrap {

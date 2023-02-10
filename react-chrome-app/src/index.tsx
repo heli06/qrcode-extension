@@ -11,10 +11,12 @@ globalStyles.innerHTML = `
   position: fixed;
   left: 0;
   top: 0;
-  width: 300px;
+  width: 400px;
   height: 100vh;
   background: #ffffff;
   border-right: 1px solid #c2c2c2;
+  overflow: scroll;
+  z-index: 999;
   }
 `;
 document.body.appendChild(rootElement);

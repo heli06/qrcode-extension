@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Input, Button, Space } from 'antd';
+import { Input, Button, Space, message } from 'antd';
 import { PanelData } from "../../type";
 import './index.css';
 
@@ -15,6 +15,7 @@ function PanelAdder({ setData }: { setData: Function }) {
       <Input onChange={onChange} value={value} />
       <Button type="primary" onClick={() => {
         if (!value) {
+          message.error('请输入分组名称');
           return;
         }
         setData((preVal: Array<PanelData>) => [...preVal, {
