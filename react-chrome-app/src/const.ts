@@ -1,0 +1,1 @@
+export const QRCODE_KEY = 'QRCODE_KEY';

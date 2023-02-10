@@ -1,0 +1,16 @@
+.qrcode-wrap {
+    display: flex;
+    height: 150px;
+    justify-content: center;
+    align-items: center;
+}
+
+.add-panel-wrap {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.panel-wrap {
+    padding: 0 20px;
+}
