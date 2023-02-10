@@ -73,41 +73,45 @@ function App() {
       <header>
         <h2 className="title-wrap">Helios的二维码管理工具</h2>
       </header>
-      <div className="qrcode-wrap">
-        {value ? <QRCode value={value} /> : <div>请选择要展示的二维码</div>}
-      </div>
-      <div className="button-group-wrap">
-        <Space>
-          <Button
-            type="primary"
-            onClick={() => {
-              setIsModalOpen(true);
-            }}
-          >
-            导入数据
-          </Button>
-          <Button
-            onClick={async () => {
-              const data = Cache.getCache(QRCODE_KEY);
-              let formatedData = '';
-              try {
-                formatedData = JSON.stringify(data)
-              } catch (e) {
-                message.error('导出数据失败');
-                console.log(e);
-              }
+      <div className="action-wrap">
+        <div className="qrcode-wrap">
+          {value ? <QRCode value={value} /> : <div>请选择要展示的二维码</div>}
+        </div>
+        <div className="button-wrap">
+          <div className="button-group-wrap">
+            <Space>
+              <Button
+                type="primary"
+                onClick={() => {
+                  setIsModalOpen(true);
+                }}
+              >
+                导入数据
+              </Button>
+              <Button
+                onClick={async () => {
+                  const data = Cache.getCache(QRCODE_KEY);
+                  let formatedData = '';
+                  try {
+                    formatedData = JSON.stringify(data)
+                  } catch (e) {
+                    message.error('导出数据失败');
+                    console.log(e);
+                  }
 
-              await navigator.clipboard.writeText(formatedData);
-              message.success("已经复制到剪贴板");
-            }}
-          >
-            导出数据
-          </Button>
-        </Space>
-      </div>
-      <div className="add-panel-wrap">
-        <PanelAdder setData={setData} />
-      </div>
+                  await navigator.clipboard.writeText(formatedData);
+                  message.success("已经复制到剪贴板");
+                }}
+              >
+                导出数据
+              </Button>
+            </Space>
+          </div>
+          <div className="add-panel-wrap">
+            <PanelAdder setData={setData} />
+          </div>
+        </div>
+        </div>
       <div className="panel-wrap">
         <CodePanels data={data} setData={setData} setValue={setValue} />
       </div>

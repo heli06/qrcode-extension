@@ -1,25 +1,42 @@
 .title-wrap {
-    height: 50px;
     display: flex;
     justify-content: center;
+    margin-bottom: 0;
+}
+
+.action-wrap {
+    display: flex;
+    justify-content: space-between;
+
+    box-sizing: border-box;
+    height: 180px;
+    padding: 10px 20px;
 }
 
 .qrcode-wrap {
+    flex: 1 1 auto;
     display: flex;
-    height: 150px;
+    min-width: 160px;
     justify-content: center;
     align-items: center;
 }
+
+.button-wrap {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
 .button-group-wrap {
     display: flex;
     justify-content: center;
-    padding-top: 20px;
 }
 
 .add-panel-wrap {
     display: flex;
     justify-content: center;
-    padding: 20px;
 }
 
 .panel-wrap {

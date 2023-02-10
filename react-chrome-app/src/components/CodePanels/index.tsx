@@ -42,7 +42,7 @@ function CodePanels({
   );
 
   return (
-    <Collapse>
+    <Collapse size="small">
       {data.map((item, index) => {
         const { title, list } = item;
         return (

@@ -37,7 +37,7 @@ function CodeList({
   }, [form, list]);
 
   return (
-    <Form form={form} onFinish={onFinish}>
+    <Form form={form} onFinish={onFinish} size="small">
       <Form.List name="items">
         {(fields, { add, remove }) => (
           <>
@@ -45,8 +45,11 @@ function CodeList({
               return (
                 <Space
                   key={key}
-                  style={{ display: "flex", marginBottom: 8 }}
                   align="baseline"
+                  style={{
+                    display: 'flex',
+                    justifyContent: 'center'
+                  }}
                 >
                   <SelectOutlined onClick={() => {
                     const url = form.getFieldValue(['items', key, 'url']);
@@ -57,10 +60,10 @@ function CodeList({
                     name={[name, "url"]}
                     rules={[{ required: true, message: "请填写链接" }]}
                   >
-                    <Input placeholder="链接" />
+                    <Input placeholder="链接" style={{ width: 230 }} />
                   </Form.Item>
                   <Form.Item {...restField} name={[name, "text"]}>
-                    <Input placeholder="备注" />
+                    <Input placeholder="备注" style={{ width: 230 }} />
                   </Form.Item>
                   <MinusCircleOutlined onClick={() => remove(name)} />
                 </Space>
