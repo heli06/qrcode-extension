@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Button, Form, Input, Space } from "antd";
+import { Button, Form, Input, message, Space } from "antd";
 import {
   MinusCircleOutlined,
   PlusOutlined,
@@ -26,6 +26,7 @@ function CodeList({
       val[index].list = values.items;
       return val;
     });
+    message.success('保存成功');
   };
 
   useEffect(() => {
