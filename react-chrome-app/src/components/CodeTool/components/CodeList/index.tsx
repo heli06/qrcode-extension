@@ -5,7 +5,7 @@ import {
   PlusOutlined,
   SelectOutlined,
 } from "@ant-design/icons";
-import { ItemData, PanelData } from "../../type";
+import { PanelData, ItemData } from "../../type";
 import "./index.css";
 
 function CodeList({

@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 import { Button, QRCode, Collapse, Popconfirm, Input, Space } from "antd";
 import { DeleteOutlined } from "@ant-design/icons";
 import CodeList from "../CodeList";
-import "./index.css";
 import { PanelData } from "../../type";
+import "./index.css";
 
 const { Panel } = Collapse;
 
