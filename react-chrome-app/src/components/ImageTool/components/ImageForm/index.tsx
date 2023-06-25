@@ -88,10 +88,7 @@ const ImageForm = () => {
           // 6、下载
           const url = URL.createObjectURL(file);
           const a = document.createElement("a");
-          const randomString = Math.random().toString(36).substring(2, 8);
-          a.download = `${fileName || "测试图片"}${
-            fileName ? "" : randomString
-          }.${fileType || ".jpg"}`;
+          a.download = `${fileName || "测试图片"}.${fileType || "jpg"}`;
           a.href = url;
           a.click();
         });
